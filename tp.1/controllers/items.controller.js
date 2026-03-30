@@ -45,7 +45,7 @@ export const updateItem = (req, res ) => {
     res.json({msg: "producto actualizado", items: items[index]});
 };
 
-export const deleteeItem = (req, res)=>{
+export const deleteItem = (req, res)=>{
     const index = items.findIndex((item)=> item.id === parseInt(req.params.id));
     if(index=== -1){
         return res.status(404).json({
